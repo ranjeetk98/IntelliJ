@@ -1,0 +1,14 @@
+*.jar
+*.war
+*.zip
+
+.idea
+*.iml
+
+*.MF
+MANIFEST
+/MANIFEST.MF
+**/MANIFEST.MF
+**/MANIFEST.*
+
+*.class
