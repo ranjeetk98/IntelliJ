@@ -9,11 +9,10 @@ public class CountChar {
         System.out.println("Enter a string : ");
         Scanner s = new Scanner(System.in);
         String str = s.nextLine();
-
+        // conver the string to upper case and remove all spaces
+        str = str.toUpperCase().replaceAll(" ","");
         char[] ch = str.toCharArray();
-
         HashMap<Character,Integer> hm = new HashMap<Character,Integer>();
-
         for(char c : ch){
             if(hm.containsKey(c))
                 hm.put(c,hm.get(c)+1);
@@ -23,8 +22,9 @@ public class CountChar {
 
         for(Map.Entry<Character,Integer> e : hm.entrySet())
         {
-            System.out.println(e.getKey() + " : "+ e.getValue());
+            System.out.print(e.getKey() + ":"+ e.getValue()+", ");
         }
+//        System.out.println(hm);
     }
 
     
