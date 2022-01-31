@@ -12,20 +12,29 @@ public class StringReverse {
         return(s.nextLine());
     }
 
+    public static void print(String s){
+        System.out.println(s);
+    }
+
+
     public static void main(String[] args){
-//        stringReverse();
-        sentenceReverse();
-//        reverseEachWord();
+//        print(stringReverse(inputString()));
+//        print(sentenceReverse());
+        print(reverseEachWord());
+
     }
 
-    private static void reverseEachWord() {
+    private static String reverseEachWord() {
         String str = inputString();
-
-
-
+        List<String> l = Arrays.asList(str.split(" "));
+        String reverse = "";
+        for (String s : l) {
+            reverse += (stringReverse(s) + " ");
+        }
+        return reverse;
     }
 
-    private static void sentenceReverse() {
+    private static String sentenceReverse() {
         String str = inputString();
 //        String[] s = str.split(" ");
 //        String reverse = "";
@@ -42,16 +51,15 @@ public class StringReverse {
             if(i!=0)
                 reverse += " ";
         }
-        System.out.println("Reverse : "+ reverse);
+        return reverse;
     }
 
-    private static void stringReverse() {
-        String str = inputString();
+    private static String stringReverse(String str) {
         String reverse = "";
         for(int i=str.length()-1 ; i>=0  ; i-- )
             reverse += str.charAt(i);
 
-        System.out.println("Output : "+ reverse);
+        return reverse;
 
     }
 }
