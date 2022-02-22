@@ -6,9 +6,8 @@ import java.util.Scanner;
 
 public class Anagram {
     public static void main(String[] args) {
-        System.out.println("Enter 1st string : ");
+        System.out.println("Enter two strings : ");
         String s1 = inputString();
-        System.out.println("Enter 2nd string : ");
         String s2 = inputString();
 
         if(charCount(s1).equals(charCount(s2)))
