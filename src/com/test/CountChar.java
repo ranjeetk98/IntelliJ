@@ -12,7 +12,10 @@ public class CountChar {
         Scanner s = new Scanner(System.in);
         String str = s.nextLine();
         HashMap<Character,Integer> hm = charCount(str);
-        System.out.println(hm);
+
+        for(Map.Entry<Character,Integer> e : hm.entrySet()){
+            System.out.println(e.getKey() + " : "+ e.getValue());
+        }
 
     }
 
