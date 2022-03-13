@@ -45,6 +45,7 @@ public class StringReverse {
 //        }
         List<String> l = Arrays.asList(str.split(" "));
         String reverse = "";
+
         for(int i=l.size()-1 ; i>=0 ; i--)
         {
             reverse += l.get(i);
@@ -54,7 +55,7 @@ public class StringReverse {
         return reverse;
     }
 
-    private static String stringReverse(String str) {
+     static String stringReverse(String str) {
         String reverse = "";
         for(int i=str.length()-1 ; i>=0  ; i-- )
             reverse += str.charAt(i);
