@@ -6,6 +6,7 @@ public class Anagram {
 
     public static void main(String[] args) {
 
+
         Scanner s = new Scanner(System.in);
         System.out.println("Enter two strings : ");
         String s1 = s.nextLine();
