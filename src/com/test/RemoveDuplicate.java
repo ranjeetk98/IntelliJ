@@ -3,6 +3,7 @@ package com.test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class RemoveDuplicate {
     public static void main(String args[]) {
@@ -14,12 +15,11 @@ public class RemoveDuplicate {
 
         method1(a);
         method2(a);
+        method3(a);
 
     }
 
     static void method1(int[] a){
-//        List<Integer> l = new ArrayList<Integer>();
-
         List<Integer> l = new ArrayList<Integer>();
 
         for(int i=0 ; i<a.length; i++)
@@ -28,7 +28,19 @@ public class RemoveDuplicate {
 
         System.out.println(l);
     }
-    static void method2(int[] a){
+    static void method2(int[] a) {
+
+        Integer[] b = new Integer[a.length];
+        for(int i=0; i<b.length; i++)
+            b[i] = a[i];
+
+        List<Integer> l = new ArrayList<>(Arrays.asList(b));
+        l = l.stream().distinct().collect(Collectors.toList());
+
+        System.out.println(l);
+    }
+
+    static void method3(int[] a){
         // For this approach, array has to be sorted
         Arrays.sort(a);
         int i,j;
