@@ -7,6 +7,7 @@ public class StringConversion {
         char[] c = str.toCharArray();
         stringConvert(c);
 
+
     }
 
     public static void stringConvert(char[] c) {
@@ -19,4 +20,5 @@ public class StringConversion {
 
         System.out.println(c);
     }
+
 }

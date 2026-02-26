@@ -1,13 +1,11 @@
 package com.test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class RemoveDuplicate {
     public static void main(String args[]) {
 
-        int[] a = new int[]{2, 3, 5, 5, 7, 5, 3, 3, 2, 3};
+        int[] a = {2, 3, 5, 5, 7, 5, 3, 3, 2, 3};
 
 //        Integer[] a1 = new Integer[a.length];
 //        Arrays.setAll(a1, i -> a[i] );
@@ -20,13 +18,13 @@ public class RemoveDuplicate {
     static void method1(int[] a){
 //        List<Integer> l = new ArrayList<Integer>();
 
-        List<Integer> l = new ArrayList<Integer>();
+        Set<Integer> set = new HashSet<>();
 
-        for(int i=0 ; i<a.length; i++)
-            if(!l.contains(a[i]))
-                l.add(a[i]);
+        for(int num : a)
+            set.add(num);
 
-        System.out.println(l);
+
+        System.out.println(set);
     }
     static void method2(int[] a){
         // For this approach, array has to be sorted

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class StringReverse {
+
     public static String inputString(){
         Scanner s = new Scanner(System.in);
         System.out.print("Enter a string : ");
@@ -19,8 +20,8 @@ public class StringReverse {
 
     public static void main(String[] args){
 //        print(stringReverse(inputString()));
-//        print(sentenceReverse());
-        print(reverseEachWord());
+        print(sentenceReverse());
+//        print(reverseEachWord());
 
     }
 
@@ -48,9 +49,8 @@ public class StringReverse {
 
         for(int i=l.size()-1 ; i>=0 ; i--)
         {
-            reverse += l.get(i);
-            if(i!=0)
-                reverse += " ";
+            reverse = reverse + l.get(i) + " ";
+
         }
         return reverse;
     }

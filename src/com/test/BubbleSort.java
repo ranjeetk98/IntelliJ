@@ -3,12 +3,12 @@ package com.test;
 public class BubbleSort {
     public static void main(String args[])
     {
-        int[] a ={3434,6,1,4,995,3,774,85,4,888,0,3,44,65,2};
+        int[] a ={40,6,1,4,90,3,70,85,4,800,0,3,44,65,2};
         bubbleSort(a);
 
 
-        for(int i=0 ; i<a.length; i++)
-            System.out.print(a[i] + " ");
+        for(int n : a)
+            System.out.print(n + " ");
 
     }
 
