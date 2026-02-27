@@ -1,4 +1,4 @@
-//Java program to count occurrence of each character in a string
+package com.test;//Java program to count occurrence of each character in a string
 
 import java.util.HashMap;
 import java.util.Scanner;
